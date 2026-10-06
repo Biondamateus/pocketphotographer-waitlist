@@ -595,6 +595,15 @@
       }
     } catch (e) { /* attribution is best-effort */ }
 
+    // ?role=buddy (or traveller / both) pre-selects the "I'm interested in" choice,
+    // so a recruiting link lands on the right option. Anything else is ignored.
+    try {
+      var roleIds = { traveller: 'role-traveller', buddy: 'role-buddy', both: 'role-both' };
+      var wanted = new URLSearchParams(window.location.search).get('role');
+      var radio = wanted && roleIds[wanted] ? document.getElementById(roleIds[wanted]) : null;
+      if (radio) radio.checked = true;
+    } catch (e) { /* default selection stays */ }
+
     var button = form.querySelector('button[type="submit"]');
 
     form.addEventListener('submit', function (ev) {
