@@ -141,12 +141,16 @@
     <li>Booking details: the city, date, time, meeting point, add-ons and price you choose or receive.</li>
     <li>Messages and photos exchanged through the app for a session — sent between you and your photo buddy only.</li>
     <li>Safety information you choose to give us: reports, disputes, or emergency-contact details for a live session.</li>
+    <li>Location: if you allow it, your phone's location is used on your phone to work out how far each photo buddy is. It is not sent to us or stored. Photo buddies choose an approximate work area, which customers see only as a distance.</li>
+    <li>Photos you choose from your library or take with the camera (profile photo, portfolio, inspiration pictures). We ask for access to your camera or photo library only when you add a photo or save one.</li>
+    <li>If you apply to be a photo buddy: a photo of a government ID, a selfie, portfolio photos and the city you want to work in. Only our review team can see the ID and selfie, and we delete them 30 days after we decide on your application. You enter payout details on Stripe's own page; we keep only the last four digits of the bank account.</li>
+    <li>A notification token for your phone, so we can tell you about a booking, a message or your photos. You can turn notifications off in your phone's settings.</li>
     <li>Waitlist sign-ups on our website: your name, email, the city you live in, whether you're interested in booking or becoming a photo buddy, and which link or platform you came from.</li>
-    <li>Basic technical data (device type, app version) and a record of key booking steps (for example a request, a delivery or a cancellation), tied to your account, to keep the app working and see where people get stuck.</li>
+    <li>Basic technical data (device type, app version), a record of key booking steps (for example a request, a delivery or a cancellation), and short error reports when something goes wrong (an event name and a short technical message, never your messages, photos or card details). All of it is tied to your account to keep the app working and see where people get stuck. Error reports are deleted after 30 days.</li>
   </ul>
 
   <h2>Payment data</h2>
-  <p class="body">Payment is handled by our payment processor, Stripe. Pocket Photographer never sees or stores your full card number — only what the processor gives us to run the app, like the card's last four digits, its brand, and whether a payment succeeded.</p>
+  <p class="body">Payment is handled by our payment processor, Stripe. Pocket Photographer never sees or stores your full card number — only what the processor gives us to run the app, like the card's last four digits, its brand, and whether a payment succeeded. Card and Apple Pay payments both go through Stripe; your card number is never shared with us.</p>
 
   <h2>Why we use it</h2>
   <ul>
@@ -161,12 +165,14 @@
     <li>Your photo buddy or customer sees only what's needed to complete a booking — your name and meeting details, not your account email.</li>
     <li>Supabase, our database and hosting provider, stores the data on our behalf as a data processor — it doesn't use it for its own purposes.</li>
     <li>PostHog, our product analytics provider (EU region), receives your account ID (not your email) and the booking steps described above, on our behalf as a data processor.</li>
+    <li>Stripe, our payment processor, receives payment details to take payments and to pay photo buddies.</li>
+    <li>Expo, which delivers our push notifications and app updates, receives your phone's notification token and the text of each notification.</li>
     <li>Formspree, the service behind our website's waitlist form, receives the waitlist details and emails them to us.</li>
     <li>We share information with authorities only if the law requires it, or to protect someone's safety.</li>
   </ul>
 
   <h2>How long we keep it</h2>
-  <p class="body">We keep your account and booking history while your account is active. If you delete your account, we remove your personal data, aside from what we're legally required to retain (for example, records tied to an open dispute or safety report). Waitlist details are kept until we've told you your city is open, or until you ask us to delete them.</p>
+  <p class="body">We keep your account and booking history while your account is active. If you delete your account, we remove your personal data, aside from what we're legally required to retain (for example, records tied to an open dispute or safety report). Waitlist details are kept until we've told you your city is open, or until you ask us to delete them. ID documents and selfies from photo buddy applications are deleted 30 days after a decision. Error reports are deleted after 30 days.</p>
 
   <h2>Your rights</h2>
   <ul>
